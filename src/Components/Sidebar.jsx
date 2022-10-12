@@ -53,7 +53,7 @@ const Sidebar = () => {
   });
 
   const getRooms = () => {
-    fetch('http://localhost:5001/rooms')
+    fetch(`${import.meta.env.VITE_APP_BASE_URL}/rooms`)
       .then((res) => res.json())
       .then((data) => setRooms(data));
   };
